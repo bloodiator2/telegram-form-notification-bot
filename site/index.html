@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Form Notfication</title>
+    <title>Φόρμα Επικοινωνίας</title>
     <style>
 
         * {
@@ -59,10 +59,10 @@
     
     <form id="form" method="POST" action="/.netlify/functions/contact">
         <input type="text" name="honeypot" class="hidden" placeholder="If you're a human being don't fill this field">
-        <input type="text" name="name" placeholder="Name..." required>
+        <input type="text" name="name" placeholder="Ονοματεπώνυμο..." required>
         <input type="email" name="email" placeholder="Email..." required>
-        <textarea name="message" placeholder="Message..."></textarea>
-        <button id="send" type="submit">SEND</button>
+        <textarea name="message" placeholder="Σχόλια..."></textarea>
+        <button id="send" type="submit">ΑΠΟΣΤΟΛΗ</button>
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -76,7 +76,7 @@
 
             e.preventDefault();
 
-            send.text("Sending...");
+            send.text("Στέλνει...");
 
             $.ajax({
                 url: "/",
